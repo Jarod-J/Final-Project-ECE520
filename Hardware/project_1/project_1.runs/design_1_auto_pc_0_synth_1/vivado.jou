@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri May 13 14:07:22 2022
+# Process ID: 10956
+# Current directory: G:/Git/Final-Project-ECE520/Hardware/project_1/project_1.runs/design_1_auto_pc_0_synth_1
+# Command line: vivado.exe -log design_1_auto_pc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_auto_pc_0.tcl
+# Log file: G:/Git/Final-Project-ECE520/Hardware/project_1/project_1.runs/design_1_auto_pc_0_synth_1/design_1_auto_pc_0.vds
+# Journal file: G:/Git/Final-Project-ECE520/Hardware/project_1/project_1.runs/design_1_auto_pc_0_synth_1\vivado.jou
+# Running On: DESKTOP-E9BSBUL, OS: Windows, CPU Frequency: 3792 MHz, CPU Physical cores: 4, Host memory: 34311 MB
+#-----------------------------------------------------------
+source design_1_auto_pc_0.tcl -notrace

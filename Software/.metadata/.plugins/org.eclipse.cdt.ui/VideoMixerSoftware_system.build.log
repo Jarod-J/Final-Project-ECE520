@@ -1,0 +1,10 @@
+14:28:43 **** Build of configuration Debug for project VideoMixerSoftware_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 58056 G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_0 G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware_system/Debug/system.bif
+sdcard_gen --xpfm G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware_system/Debug/system.bif --bitstream G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit --elf G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf,ps7_cortexa9_0
+creating BOOT.BIN using G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2021.2/bin/bootgen  -image G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+14:28:51 Build Finished (took 8s.760ms)
+

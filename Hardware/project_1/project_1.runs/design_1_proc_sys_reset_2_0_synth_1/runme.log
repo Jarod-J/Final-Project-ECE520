@@ -1,0 +1,18 @@
+
+*** Running vivado
+    with args -log design_1_proc_sys_reset_2_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_proc_sys_reset_2_0.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_proc_sys_reset_2_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1418.953 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'g:/Git/vivado-library'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_proc_sys_reset_2_0, cache-ID = ae2ebcc36d1c9ad8.
+INFO: [Common 17-206] Exiting Vivado at Fri May 13 14:08:54 2022...

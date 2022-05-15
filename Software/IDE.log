@@ -1,0 +1,592 @@
+14:21:29 INFO  : Launching XSCT server: xsct.bat -n  -interactive G:\Git\Final-Project-ECE520\Software\temp_xsdb_launch_script.tcl
+14:21:29 INFO  : Registering command handlers for Vitis TCF services
+14:21:29 INFO  : Platform repository initialization has completed.
+14:21:33 INFO  : XSCT server has started successfully.
+14:21:34 INFO  : plnx-install-location is set to ''
+14:21:34 INFO  : Successfully done setting XSCT server connection channel  
+14:21:34 INFO  : Successfully done query RDI_DATADIR 
+14:21:34 INFO  : Successfully done setting workspace for the tool. 
+14:25:12 INFO  : Result from executing command 'getProjects': design_1_wrapper
+14:25:12 INFO  : Result from executing command 'getPlatforms': 
+14:25:12 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:25:12 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+14:25:24 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+14:28:10 INFO  : Result from executing command 'getProjects': design_1_wrapper
+14:28:10 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+14:28:40 INFO  : Checking for BSP changes to sync application flags for project 'VideoMixerSoftware'...
+15:06:58 INFO  : Launching XSCT server: xsct.bat -n  -interactive G:\Git\Final-Project-ECE520\Software\temp_xsdb_launch_script.tcl
+15:07:09 INFO  : Platform repository initialization has completed.
+15:07:09 INFO  : Registering command handlers for Vitis TCF services
+15:07:11 INFO  : XSCT server has started successfully.
+15:07:11 INFO  : plnx-install-location is set to ''
+15:07:12 INFO  : Successfully done setting XSCT server connection channel  
+15:07:12 INFO  : Successfully done query RDI_DATADIR 
+15:07:12 INFO  : Successfully done setting workspace for the tool. 
+15:08:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:08:27 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+15:08:28 INFO  : 'jtag frequency' command is executed.
+15:08:28 INFO  : Context for 'APU' is selected.
+15:08:28 INFO  : System reset is completed.
+15:08:31 INFO  : 'after 3000' command is executed.
+15:08:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+15:08:32 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+15:08:32 INFO  : Context for 'APU' is selected.
+15:08:32 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:08:32 INFO  : 'configparams force-mem-access 1' command is executed.
+15:08:32 INFO  : Context for 'APU' is selected.
+15:08:32 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:08:33 INFO  : 'ps7_init' command is executed.
+15:08:33 INFO  : 'ps7_post_config' command is executed.
+15:08:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:08:33 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:08:33 INFO  : 'configparams force-mem-access 0' command is executed.
+15:08:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:08:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:08:34 INFO  : 'con' command is executed.
+15:08:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:08:34 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+15:09:14 INFO  : Disconnected from the channel tcfchan#1.
+15:09:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+15:09:15 INFO  : 'jtag frequency' command is executed.
+15:09:15 INFO  : Context for 'APU' is selected.
+15:09:15 INFO  : System reset is completed.
+15:09:18 INFO  : 'after 3000' command is executed.
+15:09:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+15:09:19 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+15:09:19 INFO  : Context for 'APU' is selected.
+15:09:22 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:09:22 INFO  : 'configparams force-mem-access 1' command is executed.
+15:09:22 INFO  : Context for 'APU' is selected.
+15:09:22 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:09:23 INFO  : 'ps7_init' command is executed.
+15:09:23 INFO  : 'ps7_post_config' command is executed.
+15:09:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:23 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:09:23 INFO  : 'configparams force-mem-access 0' command is executed.
+15:09:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:09:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:24 INFO  : 'con' command is executed.
+15:09:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:09:24 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+15:11:05 INFO  : Disconnected from the channel tcfchan#2.
+15:11:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:11:06 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+15:11:06 INFO  : 'jtag frequency' command is executed.
+15:11:06 INFO  : Context for 'APU' is selected.
+15:11:06 INFO  : System reset is completed.
+15:11:09 INFO  : 'after 3000' command is executed.
+15:11:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+15:11:10 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+15:11:10 INFO  : Context for 'APU' is selected.
+15:11:13 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:11:13 INFO  : 'configparams force-mem-access 1' command is executed.
+15:11:13 INFO  : Context for 'APU' is selected.
+15:11:13 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:11:13 INFO  : 'ps7_init' command is executed.
+15:11:13 INFO  : 'ps7_post_config' command is executed.
+15:11:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:14 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:11:14 INFO  : 'configparams force-mem-access 0' command is executed.
+15:11:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:11:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:11:14 INFO  : 'con' command is executed.
+15:11:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:11:14 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+15:13:11 INFO  : Disconnected from the channel tcfchan#3.
+15:13:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:13:12 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+15:13:12 INFO  : 'jtag frequency' command is executed.
+15:13:14 INFO  : Context for 'APU' is selected.
+15:13:14 INFO  : System reset is completed.
+15:13:17 INFO  : 'after 3000' command is executed.
+15:13:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+15:13:18 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+15:13:18 INFO  : Context for 'APU' is selected.
+15:13:21 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:13:21 INFO  : 'configparams force-mem-access 1' command is executed.
+15:13:21 INFO  : Context for 'APU' is selected.
+15:13:21 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:13:22 INFO  : 'ps7_init' command is executed.
+15:13:22 INFO  : 'ps7_post_config' command is executed.
+15:13:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:22 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:13:22 INFO  : 'configparams force-mem-access 0' command is executed.
+15:13:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:13:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:22 INFO  : 'con' command is executed.
+15:13:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:13:22 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+15:14:48 INFO  : Disconnected from the channel tcfchan#4.
+15:14:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:14:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+15:14:49 INFO  : 'jtag frequency' command is executed.
+15:14:51 INFO  : Context for 'APU' is selected.
+15:14:51 INFO  : System reset is completed.
+15:14:54 INFO  : 'after 3000' command is executed.
+15:14:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+15:14:56 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+15:14:56 INFO  : Context for 'APU' is selected.
+15:14:59 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:14:59 INFO  : 'configparams force-mem-access 1' command is executed.
+15:14:59 INFO  : Context for 'APU' is selected.
+15:14:59 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:14:59 INFO  : 'ps7_init' command is executed.
+15:14:59 INFO  : 'ps7_post_config' command is executed.
+15:14:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:15:00 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:15:00 INFO  : 'configparams force-mem-access 0' command is executed.
+15:15:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:15:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:15:00 INFO  : 'con' command is executed.
+15:15:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:15:00 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+15:16:06 INFO  : Disconnected from the channel tcfchan#5.
+15:16:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:16:07 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+15:16:07 INFO  : 'jtag frequency' command is executed.
+15:16:07 INFO  : Context for 'APU' is selected.
+15:16:07 INFO  : System reset is completed.
+15:16:10 INFO  : 'after 3000' command is executed.
+15:16:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+15:16:12 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+15:16:12 INFO  : Context for 'APU' is selected.
+15:16:14 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:16:14 INFO  : 'configparams force-mem-access 1' command is executed.
+15:16:14 INFO  : Context for 'APU' is selected.
+15:16:15 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+15:16:15 INFO  : 'ps7_init' command is executed.
+15:16:15 INFO  : 'ps7_post_config' command is executed.
+15:16:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:15 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:16:15 INFO  : 'configparams force-mem-access 0' command is executed.
+15:16:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:16:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:16:16 INFO  : 'con' command is executed.
+15:16:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:16:16 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+15:22:25 INFO  : Disconnected from the channel tcfchan#6.
+16:35:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive G:\Git\Final-Project-ECE520\Software\temp_xsdb_launch_script.tcl
+16:35:51 INFO  : Platform repository initialization has completed.
+16:35:51 INFO  : Registering command handlers for Vitis TCF services
+16:35:53 INFO  : XSCT server has started successfully.
+16:35:53 INFO  : plnx-install-location is set to ''
+16:35:53 INFO  : Successfully done setting XSCT server connection channel  
+16:35:53 INFO  : Successfully done setting workspace for the tool. 
+16:35:53 INFO  : Successfully done query RDI_DATADIR 
+21:32:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive G:\Git\Final-Project-ECE520\Software\temp_xsdb_launch_script.tcl
+21:32:17 INFO  : Platform repository initialization has completed.
+21:32:17 INFO  : Registering command handlers for Vitis TCF services
+21:32:18 INFO  : XSCT server has started successfully.
+21:32:18 INFO  : plnx-install-location is set to ''
+21:32:18 INFO  : Successfully done setting XSCT server connection channel  
+21:32:18 INFO  : Successfully done setting workspace for the tool. 
+21:32:18 INFO  : Successfully done query RDI_DATADIR 
+22:21:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:21:32 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+22:21:32 INFO  : 'jtag frequency' command is executed.
+22:21:32 INFO  : Context for 'APU' is selected.
+22:21:32 INFO  : System reset is completed.
+22:21:36 INFO  : 'after 3000' command is executed.
+22:21:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+22:21:37 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+22:21:37 INFO  : Context for 'APU' is selected.
+22:21:37 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+22:21:37 INFO  : 'configparams force-mem-access 1' command is executed.
+22:21:37 INFO  : Context for 'APU' is selected.
+22:21:37 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+22:21:38 INFO  : 'ps7_init' command is executed.
+22:21:38 INFO  : 'ps7_post_config' command is executed.
+22:21:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:21:38 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:21:38 INFO  : 'configparams force-mem-access 0' command is executed.
+22:21:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:21:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:21:38 INFO  : 'con' command is executed.
+22:21:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:21:38 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+22:22:51 INFO  : Disconnected from the channel tcfchan#1.
+22:22:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:22:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+22:22:52 INFO  : 'jtag frequency' command is executed.
+22:22:53 INFO  : Context for 'APU' is selected.
+22:22:53 INFO  : System reset is completed.
+22:22:56 INFO  : 'after 3000' command is executed.
+22:22:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+22:22:57 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+22:22:57 INFO  : Context for 'APU' is selected.
+22:23:00 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+22:23:00 INFO  : 'configparams force-mem-access 1' command is executed.
+22:23:00 INFO  : Context for 'APU' is selected.
+22:23:00 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+22:23:01 INFO  : 'ps7_init' command is executed.
+22:23:01 INFO  : 'ps7_post_config' command is executed.
+22:23:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:23:01 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:23:01 INFO  : 'configparams force-mem-access 0' command is executed.
+22:23:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:23:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:23:01 INFO  : 'con' command is executed.
+22:23:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:23:01 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+22:29:28 INFO  : Disconnected from the channel tcfchan#2.
+22:29:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:29:29 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+22:29:29 INFO  : 'jtag frequency' command is executed.
+22:29:31 INFO  : Context for 'APU' is selected.
+22:29:31 INFO  : System reset is completed.
+22:29:34 INFO  : 'after 3000' command is executed.
+22:29:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+22:29:36 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+22:29:36 INFO  : Context for 'APU' is selected.
+22:29:39 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+22:29:39 INFO  : 'configparams force-mem-access 1' command is executed.
+22:29:39 INFO  : Context for 'APU' is selected.
+22:29:39 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+22:29:39 INFO  : 'ps7_init' command is executed.
+22:29:39 INFO  : 'ps7_post_config' command is executed.
+22:29:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:29:40 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:29:40 INFO  : 'configparams force-mem-access 0' command is executed.
+22:29:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:29:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:29:40 INFO  : 'con' command is executed.
+22:29:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:29:40 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+23:09:07 INFO  : Disconnected from the channel tcfchan#3.
+23:09:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:09:08 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+23:09:08 INFO  : 'jtag frequency' command is executed.
+23:09:09 INFO  : Context for 'APU' is selected.
+23:09:09 INFO  : System reset is completed.
+23:09:12 INFO  : 'after 3000' command is executed.
+23:09:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+23:09:13 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+23:09:13 INFO  : Context for 'APU' is selected.
+23:09:16 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:09:16 INFO  : 'configparams force-mem-access 1' command is executed.
+23:09:16 INFO  : Context for 'APU' is selected.
+23:09:16 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+23:09:16 INFO  : 'ps7_init' command is executed.
+23:09:16 INFO  : 'ps7_post_config' command is executed.
+23:09:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:09:17 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:09:17 INFO  : 'configparams force-mem-access 0' command is executed.
+23:09:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:09:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:09:17 INFO  : 'con' command is executed.
+23:09:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:09:17 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+23:11:07 INFO  : Disconnected from the channel tcfchan#4.
+23:11:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:11:09 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+23:11:09 INFO  : 'jtag frequency' command is executed.
+23:11:09 INFO  : Context for 'APU' is selected.
+23:11:09 INFO  : System reset is completed.
+23:11:12 INFO  : 'after 3000' command is executed.
+23:11:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+23:11:13 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+23:11:13 INFO  : Context for 'APU' is selected.
+23:11:15 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:11:15 INFO  : 'configparams force-mem-access 1' command is executed.
+23:11:15 INFO  : Context for 'APU' is selected.
+23:11:15 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+23:11:16 INFO  : 'ps7_init' command is executed.
+23:11:16 INFO  : 'ps7_post_config' command is executed.
+23:11:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:11:16 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:11:17 INFO  : 'configparams force-mem-access 0' command is executed.
+23:11:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:11:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:11:17 INFO  : 'con' command is executed.
+23:11:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:11:17 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+23:14:14 INFO  : Disconnected from the channel tcfchan#5.
+23:14:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:14:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77BB7A' is selected.
+23:14:15 INFO  : 'jtag frequency' command is executed.
+23:14:17 INFO  : Context for 'APU' is selected.
+23:14:17 INFO  : System reset is completed.
+23:14:20 INFO  : 'after 3000' command is executed.
+23:14:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}' command is executed.
+23:14:21 INFO  : Device configured successfully with "G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit"
+23:14:21 INFO  : Context for 'APU' is selected.
+23:14:24 INFO  : Hardware design and registers information is loaded from 'G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:14:24 INFO  : 'configparams force-mem-access 1' command is executed.
+23:14:24 INFO  : Context for 'APU' is selected.
+23:14:24 INFO  : Sourcing of 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl' is done.
+23:14:24 INFO  : 'ps7_init' command is executed.
+23:14:24 INFO  : 'ps7_post_config' command is executed.
+23:14:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:14:25 INFO  : The application 'G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:14:25 INFO  : 'configparams force-mem-access 0' command is executed.
+23:14:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77BB7A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351A77BB7A-13722093-0"}
+fpga -file G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw G:/Git/Final-Project-ECE520/Software/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow G:/Git/Final-Project-ECE520/Software/VideoMixerSoftware/Debug/VideoMixerSoftware.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:14:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:14:25 INFO  : 'con' command is executed.
+23:14:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:14:25 INFO  : Launch script is exported to file 'G:\Git\Final-Project-ECE520\Software\VideoMixerSoftware_system\_ide\scripts\debugger_videomixersoftware-default.tcl'
+23:16:26 INFO  : Disconnected from the channel tcfchan#6.

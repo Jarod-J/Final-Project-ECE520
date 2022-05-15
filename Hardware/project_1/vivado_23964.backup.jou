@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri May 13 16:04:04 2022
+# Process ID: 23964
+# Current directory: G:/Git/Final-Project-ECE520/Hardware/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10248 G:\Git\Final-Project-ECE520\Hardware\project_1\project_1.xpr
+# Log file: G:/Git/Final-Project-ECE520/Hardware/project_1/vivado.log
+# Journal file: G:/Git/Final-Project-ECE520/Hardware/project_1\vivado.jou
+# Running On: DESKTOP-E9BSBUL, OS: Windows, CPU Frequency: 3792 MHz, CPU Physical cores: 4, Host memory: 34311 MB
+#-----------------------------------------------------------
+start_gui
+open_project G:/Git/Final-Project-ECE520/Hardware/project_1/project_1.xpr
+open_bd_design {G:/Git/Final-Project-ECE520/Hardware/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1
